@@ -1,2 +1,3 @@
 # weh-matter
-⚗ Front matter parsing plugin for the weh static site generator
+
+A front matter parsing plugin for the [weh static site generator](https://github.com/wehjs/weh)

@@ -1,3 +1,3 @@
-const matter = require('./lib/matter')
+const plugin = require('./lib/plugin')
 
-module.exports = matter
+module.exports = plugin
