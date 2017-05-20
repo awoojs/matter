@@ -1,0 +1,36 @@
+{
+  "name": "weh-matter",
+  "version": "1.0.0",
+  "description": "⚗ Front matter parsing plugin for the weh static site generator",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "ava": "ava",
+    "ava:watch": "ava -w",
+    "test": "npm run lint && npm run ava"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fredericmarx/weh-matter.git"
+  },
+  "keywords": [],
+  "author": "Frederic Marx <marx.frederic@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fredericmarx/weh-matter/issues"
+  },
+  "homepage": "https://github.com/fredericmarx/weh-matter#readme",
+  "dependencies": {
+    "gray-matter": "^2.1.1"
+  },
+  "devDependencies": {
+    "@weh/weh": "^2.0.1",
+    "ava": "^0.19.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
+  }
+}
