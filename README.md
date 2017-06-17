@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  A front matter parsing plugin for the <a href="https://github.com/wehjs/matter">weh static site generator</a>
+  A front matter parsing plugin for the <a href="https://github.com/wehjs/weh">weh static site generator</a>
 </p>
 
 <p align="center">
@@ -20,3 +20,14 @@
   <a href="https://github.com/feross/standard"><img src="https://img.shields.io/badge/code%20style-standard-blue.svg?style=flat-square"
   alt="code style: standard"></a>
 </p>
+
+## Features
+
+- **Extract YAML metadata** _(Front Matter)_ from text files within the [weh](https://github.com/wehjs/weh) `files` object
+- **Custom filter functions** to include or exclude files from transformation
+
+## Installation
+
+```sh
+npm install --save @weh/matter
+```
