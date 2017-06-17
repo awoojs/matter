@@ -1,6 +1,18 @@
 const test = require('ava')
 const transform = require('../lib/transform')
 
+test('does nothing if there is no front matter', t => {
+  const input = {
+    contents: 'Hello'
+  }
+
+  const expected = {
+    contents: 'Hello'
+  }
+
+  t.deepEqual(transform(input), expected)
+})
+
 test('parses front matter', t => {
   const input = {
     contents: '---\nworks: true\n---\nHello'
