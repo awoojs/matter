@@ -31,3 +31,42 @@
 ```sh
 npm install --save @weh/matter
 ```
+
+## Example
+
+```js
+const weh = require('@weh/weh')
+const matter = require('@weh/matter')
+
+// enter our main function:
+// the main function should be an async function so that
+// it automatically returns a promise
+weh(async site => {
+  // we register our plugin...
+  site.use(matter)
+  // ...and initiate the build process
+  return site
+})
+```
+
+## How does it work?
+
+`@weh/matter` extracts any Front Matter from the `contents` property of a `file` object and writes it to its `metadata` property.
+
+Given the following text file:
+
+```
+---
+title: Greeting
+---
+Hello World
+```
+
+The resulting weh `file` object would be:
+
+```js
+contents: 'Hello World',
+metadata: {
+  title: Greeting
+}
+```
