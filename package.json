@@ -6,8 +6,11 @@
   "scripts": {
     "lint": "standard | snazzy",
     "ava": "ava",
+    "ava:ci": "nyc ava",
     "ava:watch": "ava -w",
-    "test": "npm run lint && npm run ava"
+    "test": "npm run lint && npm run ava:ci",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'update code of conduct'"
   },
   "files": [
     "lib",
@@ -15,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fredericmarx/weh-matter.git"
+    "url": "git+https://github.com/wehjs/matter.git"
   },
   "keywords": [
     "front-matter",
@@ -25,16 +28,19 @@
   "author": "Frederic Marx <marx.frederic@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fredericmarx/weh-matter/issues"
+    "url": "https://github.com/wehjs/matter/issues"
   },
-  "homepage": "https://github.com/fredericmarx/weh-matter#readme",
+  "homepage": "https://github.com/wehjs/matter#readme",
   "dependencies": {
     "gray-matter": "^2.1.1",
     "is-empty-object": "^1.1.1"
   },
   "devDependencies": {
     "ava": "^0.19.1",
+    "codecov": "^2.2.0",
+    "nyc": "^11.0.2",
     "snazzy": "^7.0.0",
-    "standard": "^10.0.2"
+    "standard": "^10.0.2",
+    "weallbehave": "^1.2.0"
   }
 }
