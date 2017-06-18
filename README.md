@@ -67,6 +67,6 @@ The resulting weh `file` object would be:
 ```js
 contents: 'Hello World',
 metadata: {
-  title: Greeting
+  title: 'Greeting'
 }
 ```
