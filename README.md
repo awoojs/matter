@@ -70,3 +70,11 @@ metadata: {
   title: 'Greeting'
 }
 ```
+
+## Code of Conduct
+
+This repository operates under the [`weallbehave`](https://github.com/wealljs/weallbehave) Code of Conduct. Its contents can be found in [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md).
+
+## License
+
+MIT (see [LICENSE](LICENSE) document)
