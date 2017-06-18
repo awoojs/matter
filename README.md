@@ -23,8 +23,8 @@
 
 ## Features
 
-- **Extract YAML metadata** _(Front Matter)_ from text files within the [weh](https://github.com/wehjs/weh) `files` object
-- **Custom filter functions** to include or exclude files from transformation
+- **Extract YAML metadata** _(Front Matter)_ from text files within the [weh](https://github.com/wehjs/weh) `files` array
+- **Custom filter functions** to include or exclude files from transforms
 
 ## Installation
 
@@ -32,7 +32,7 @@
 npm install --save @weh/matter
 ```
 
-## Example
+## Default example
 
 ```js
 const weh = require('@weh/weh')
@@ -49,9 +49,45 @@ weh(async site => {
 })
 ```
 
+## Filter example
+
+You can pass a custom filter as an option to `matter` to include or exclude files.
+
+A filter is a function that takes the arguments `file`, `options`, and `files`. `file` is the current file, `options` is the options object passed to `matter`, and `files` is the entire array of files created by `weh`.
+
+When the filter function returns `true`, `matter` applies its transforms to the current `file` object. Otherwise the `file` object remains unchanged.
+
+The default filter in `matter` always returns true, so the transform will be applied to every file:
+
+```js
+function filter (file, options, files) {
+  return true
+}
+```
+
+This is how you could use a filter to only apply `matter` to files ending with `.md`:
+
+```js
+const weh = require('@weh/weh')
+const matter = require('@weh/matter')
+
+// custom filter function
+// returns true if file path ends with '.md'
+function myCustomFilter (file, options, files) {
+  return file.path.endsWith('.md')
+}
+
+weh(async site => {
+  // we register the matter plugin with our custom filter function...
+  site.use(matter, {filter: myCustomFilter})
+  // ...and initiate the build process
+  return site
+})
+```
+
 ## How does it work?
 
-`@weh/matter` extracts any Front Matter from the `contents` property of a `file` object and writes it to its `metadata` property.
+`matter` extracts any Front Matter from the `contents` property of a `file` object and writes it to its `metadata` property.
 
 Given the following text file:
 
