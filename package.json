@@ -1,5 +1,5 @@
 {
-  "name": "weh-matter",
+  "name": "@weh/matter",
   "version": "1.0.0",
   "description": "⚗ Front matter parsing plugin for the weh static site generator",
   "main": "index.js",
