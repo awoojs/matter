@@ -27,3 +27,22 @@ test('parses front matter', t => {
 
   t.deepEqual(transform(input), expected)
 })
+
+test('accepts options', t => {
+  const input = {
+    contents: '~~~\nworks: true\n~~~\nHello'
+  }
+
+  const options = {
+    delims: '~~~'
+  }
+
+  const expected = {
+    contents: 'Hello',
+    metadata: {
+      works: true
+    }
+  }
+
+  t.deepEqual(transform(input, options), expected)
+})

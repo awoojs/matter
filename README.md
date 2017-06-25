@@ -85,6 +85,28 @@ weh(async site => {
 })
 ```
 
+## Options Example
+
+`matter` uses `[gray-matter](http://npm.im/gray-matter)` for parsing metadata. All options of `gray-matter` are also available in `matter`.
+
+This is what a plugin call with custom options would look like:
+
+```js
+const weh = require('@weh/weh')
+const matter = require('@weh/matter')
+
+// we define our options object...
+const myMatterOptions = {
+  delims: '~~~'
+}
+
+weh(async site => {
+  // ...and pass it to the use method
+  site.use(matter, myMatterOptions)
+  return site
+})
+```
+
 ## How does it work?
 
 `matter` extracts any Front Matter from the `contents` property of a `file` object and writes it to its `metadata` property.
