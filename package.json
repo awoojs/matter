@@ -36,6 +36,7 @@
     "is-empty-object": "^1.1.1"
   },
   "devDependencies": {
+    "@weh/weh": "2.2.1",
     "ava": "^0.19.1",
     "codecov": "^2.2.0",
     "nyc": "^11.0.2",
