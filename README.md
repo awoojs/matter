@@ -7,15 +7,17 @@
 </p>
 
 <p align="center">
-  <!-- Stability -->
-  <a href="https://nodejs.org/api/documentation.html#documentation_stability_index"><img src="https://img.shields.io/badge/stability-stable-green.svg?style=flat-square"
-  alt="API stability"></a>
   <!-- code coverage -->
   <a href="https://codecov.io/gh/wehjs/matter"><img src="https://img.shields.io/codecov/c/github/wehjs/matter.svg?style=flat-square"
   alt="code coverage"></a>
   <!-- travis ci -->
   <a href="https://travis-ci.org/wehjs/matter"><img src="https://img.shields.io/travis/wehjs/matter.svg?style=flat-square"
   alt="test status"></a>
+  <!-- npm version -->
+  <a href="https://npmjs.org/package/@weh/matter">
+    <img src="https://img.shields.io/npm/v/@weh/matter.svg?style=flat-square"
+      alt="npm version" />
+  </a>
   <!-- code style -->
   <a href="https://github.com/feross/standard"><img src="https://img.shields.io/badge/code%20style-standard-blue.svg?style=flat-square"
   alt="code style: standard"></a>
@@ -32,7 +34,7 @@
 npm install --save @weh/matter
 ```
 
-## Default example
+## Usage example
 
 ```js
 const weh = require('@weh/weh')
@@ -128,6 +130,27 @@ metadata: {
   title: 'Greeting'
 }
 ```
+
+## Development
+
+To work on this repository, clone it and install the npm dependencies:
+
+```sh
+git clone https://github.com/YOURREPO
+cd YOURREPO
+npm install
+```
+
+There are a couple of npm scripts provided for convenience:
+
+- `npm test` - runs linters and ava in ci mode
+- `npm run lint` - runs linters
+- `npm run ava` - only runs ava once
+- `npm run ava:ci` - runs ava in ci mode (generates coverage data)
+- `npm run ava:watch` - runs ava in watch mode
+- `npm run coverage` - generates coverage data
+- `npm run update-coc` - pulls the latest `weallbehave` code of conduct
+- `npm run publish` - published npm package using `np`
 
 ## Code of Conduct
 
