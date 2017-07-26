@@ -21,11 +21,15 @@
   <!-- code style -->
   <a href="https://github.com/feross/standard"><img src="https://img.shields.io/badge/code%20style-standard-blue.svg?style=flat-square"
   alt="code style: standard"></a>
+  
+  <!-- greenkeeper -->
+  <a href="https://greenkeeper.io">
+    <img src="https://badges.greenkeeper.io/wehjs/weh.svg"
+      alt="greenkeeper badge" />  
+  </a>
 </p>
 
 ## Features
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/wehjs/matter.svg)](https://greenkeeper.io/)
 
 - **Extract YAML metadata** _(Front Matter)_ from text files within the [weh](https://github.com/wehjs/weh) `files` array
 - **Custom filter functions** to include or exclude files from transforms
