@@ -33,12 +33,12 @@
   },
   "homepage": "https://github.com/wehjs/matter#readme",
   "dependencies": {
-    "gray-matter": "^2.1.1",
+    "gray-matter": "^3.0.2",
     "is-empty-object": "^1.1.1"
   },
   "devDependencies": {
-    "@weh/weh": "2.2.2",
-    "ava": "^0.19.1",
+    "@weh/weh": "2.2.3",
+    "ava": "^0.21.0",
     "codecov": "^2.2.0",
     "np": "2.16.0",
     "nyc": "^11.0.2",
