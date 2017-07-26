@@ -25,6 +25,8 @@
 
 ## Features
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/wehjs/matter.svg)](https://greenkeeper.io/)
+
 - **Extract YAML metadata** _(Front Matter)_ from text files within the [weh](https://github.com/wehjs/weh) `files` array
 - **Custom filter functions** to include or exclude files from transforms
 
