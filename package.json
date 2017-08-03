@@ -37,7 +37,7 @@
     "is-empty-object": "^1.1.1"
   },
   "devDependencies": {
-    "@weh/weh": "2.2.3",
+    "@weh/weh": "2.2.4",
     "ava": "^0.21.0",
     "codecov": "^2.2.0",
     "np": "2.16.0",
