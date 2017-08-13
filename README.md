@@ -1,3 +1,5 @@
+# DEPRECATED! ALL OFFICIAL PLUGINS NOW LIVE IN [CORE](http://github.com/wehjs/core)
+
 <h1 align="center">
   @weh/matter
 </h1>
